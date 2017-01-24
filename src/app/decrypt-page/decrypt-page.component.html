@@ -1,0 +1,12 @@
+<div class="decrypt-page">
+  <h3>{{messageId}}</h3>
+  <md-input-container>
+    <input md-input placeholder="Secret" #secret>
+  </md-input-container>
+  <button (click)="decryptMessage(secret.value)" [disabled]="secret.value.length < 16" md-button>Decrypt!</button>
+  <div class="decrypt-page-message">
+    <span>{{ message}}</span>
+    <br>
+    <strong>{{ encryptedMessage }}</strong>
+  </div>
+</div>

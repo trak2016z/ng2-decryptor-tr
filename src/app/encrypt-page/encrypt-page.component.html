@@ -1,0 +1,11 @@
+<div class="encrypt-page">
+  <md-input-container>
+    <input md-input placeholder="Message" #message>
+  </md-input-container>
+  <md-input-container>
+    <input md-input placeholder="Secret" #secret>
+  </md-input-container>
+  <button (click)="encryptNewMessage(secret.value, message.value)" [disabled]="!message.value || secret.value.length < 16" md-button>
+    Encrypt!
+  </button>
+</div>
